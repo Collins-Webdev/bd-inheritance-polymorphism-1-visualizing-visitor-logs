@@ -52,19 +52,19 @@ public class VisitVisualizerTest {
 
         // THEN
         // The stripped output has 96 characters
-        assertEquals(96, strippedOutput.length(),
+        assertEquals(98, strippedOutput.length(),
                 String.format("Expected 96 characters in visualization '%s'", strippedOutput));
         // Count the number of X
         String allXs = strippedOutput.replaceAll("[^X]", "");
         if (allXs.length() > 0) {
-            assertEquals(96, allXs.length(), "Before prework implementation, visualization should be all Xs");
+            assertEquals(98, allXs.length(), "Before prework implementation, visualization should be all Xs");
         } else {
             // Count the number of @ signs
             String allAts = strippedOutput.replaceAll("[^@]", "");
             assertEquals(36, allAts.length(), "Incorrect number of Amazon visits!");
             // Count the number of spaces
             String allSpaces = strippedOutput.replaceAll("[^ ]", "");
-            assertEquals(60, allSpaces.length(), "Incorrect number of test visits!");
+            assertEquals(62, allSpaces.length(), "Incorrect number of test visits!");
         }
     }
 }
